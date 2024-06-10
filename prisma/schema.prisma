@@ -21,4 +21,5 @@ model Product {
   name        String
   description String
   images      String[]
+  price       Float
 }
