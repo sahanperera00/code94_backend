@@ -25,7 +25,7 @@ export async function removeFavorite(userId, productId) {
 export async function getUserFavorites(userId) {
   const favorites = await prisma.favoriteProduct.findMany({
     where: {
-      userId,
+      userId: userId,
     },
     include: {
       product: true,

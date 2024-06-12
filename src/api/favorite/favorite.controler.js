@@ -15,7 +15,7 @@ export async function addFavoriteController(req, res) {
 }
 
 export async function removeFavoriteController(req, res) {
-  const { userId } = req.user;
+  const { userId } = req.body;
   const { productId } = req.params;
   try {
     await removeFavorite(userId, productId);
